@@ -5,8 +5,9 @@ export const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">Blog</a>
-    <a className="btn btn-ghost text-xl">Resume</a>
+    <Link href="/" className="btn btn-ghost normal-case text-xl">Brian Liu</Link>
+    <Link href="/Blog" className="btn btn-ghost text-xl">Blog </Link>
+    <Link href="/Skills" className="btn btn-ghost text-xl">Resume </Link>
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">

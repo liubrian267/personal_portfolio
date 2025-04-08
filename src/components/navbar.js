@@ -13,7 +13,7 @@ export const Navbar = () => {
         Blog
       </Link>
       <Link href="/Skills" className="text-lg font-medium hover:text-gray-300">
-        Resume
+        Projects
       </Link>
     </nav>
     <div className="flex items-center space-x-6">

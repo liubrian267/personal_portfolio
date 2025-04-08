@@ -3,22 +3,47 @@ import Link from 'next/link'
 import Image from 'next/image'
 export const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-  <div className="flex-1">
-    <Link href="/" className="btn btn-ghost normal-case text-xl">Brian Liu</Link>
-    <Link href="/Blog" className="btn btn-ghost text-xl">Blog </Link>
-    <Link href="/Skills" className="btn btn-ghost text-xl">Resume </Link>
+    <header className="p-4 border border-#F5F5F5 rounded-bl-lg rounded-br-lg">
+  <div className="w-full flex justify-between items-center">
+    <nav className="flex items-center space-x-6">
+      <Link href="/" className="text-lg font-medium hover:text-gray-300">
+        Brian Liu
+      </Link>
+      <Link href="/Blog" className="text-lg font-medium hover:text-gray-300">
+        Blog
+      </Link>
+      <Link href="/Skills" className="text-lg font-medium hover:text-gray-300">
+        Resume
+      </Link>
+    </nav>
+    <div className="flex items-center space-x-6">
+      <Link
+        href="https://github.com/liubrian267"
+        className="hover:text-gray-300"
+        aria-label="GitHub"
+      >
+        <Image
+          src="/github-mark/github-mark.png"
+          alt="Github"
+          width={40}
+          height={40}
+        />
+      </Link>
+      <Link
+        href="https://www.linkedin.com/in/brian-liu-378990257/"
+        className="hover:text-gray-300"
+        aria-label="LinkedIn"
+      >
+        <Image
+          src="/in-logo/LI-In-Bug.png"
+          alt="LinkedIn"
+          width={40}
+          height={40}
+        />
+      </Link>
+    </div>
   </div>
-  <div className="flex-none">
-    <ul className="menu menu-horizontal px-1">
-      <li><Link href="https://github.com/liubrian267">
-      <Image src="/github-mark/github-mark-white.png" alt="Github" width={40} height={40}/>
-      </Link></li>
-      <li><Link href="https://www.linkedin.com/in/brian-liu-378990257/">
-      <Image src="/in-logo/LI-In-Bug.png" alt="LinkedIn" width={40} height={40}/>
-      </Link></li>
-    </ul>
-  </div>
-</div>
+</header>
+
   )
 }

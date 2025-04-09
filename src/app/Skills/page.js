@@ -16,8 +16,11 @@ const page = () => {
           
           <ProjectCard imageUrl="/bruin-brawlers.png" title="Bruin Brawlers" description="Track in-game statistics for Brawl Stars, add and view your friends statistics, make posts to share anything related, check leaderboard to see top players at UCLA" 
           techStack={["React", "NextJS", "TypeScript", "MongoDB"]} links={["https://github.com/liubrian267/Bruin-Brawlers", "https://bruin-brawlers.vercel.app/"]}/>
-          <ProjectCard title="CollegeMart"/>
-          <ProjectCard title="WorthIt"/>
+          <ProjectCard title="CollegeMart" description="Marketplace exclusive to college students to safe transactions in a close proximity" techStack={["React", "NextJS", "JavaScript", "PostgresSQL", "Supabase"]}/>
+          <ProjectCard imageUrl="/CourseSync.png" title="CourseSync" description="Generate a schedule based on desired courses" techStack={["React", "NextJS", "TypeScript", "MongoDB"
+          ]}/>
+          <ProjectCard title="WorthIt" description="Take a picture of a price tag in foreign currency and convert to realtime price, compare with market average to see if your getting a good deal" techStack={["React Native", "Javascript", "Python", "Fast API"
+          ]}/>
         </div>
       </div>
     </div>

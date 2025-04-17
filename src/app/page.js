@@ -1,9 +1,15 @@
 import React from "react";
+import FaceCycle from "@/components/faceCycle";
 const page = () => {
   return (
     <div className="mx-auto max-w-4xl px-4 text-left">
       <div className="mt-10 text-5xl font-bold">
-        Hello, I'm Brian (^-^)/
+        <div className="flex items-center">
+          Hello, I’m Brian
+          <span className="ml-4">
+            <FaceCycle />
+          </span>
+        </div>
         <hr className="mt-2 border border-#F5F5F5"></hr>
         <div className="mt-4 text-2xl font-normal">
           I’m a 3rd year student at UCLA studying computational mathematics. I’m

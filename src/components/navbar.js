@@ -6,7 +6,7 @@ export const Navbar = () => {
     <header className="p-4 border border-#F5F5F5 rounded-bl-lg rounded-br-lg">
   <div className="w-full flex justify-between items-center">
     <nav className="flex items-center space-x-6">
-      <Link href="/" className="text-lg font-medium hover:text-gray-300">
+      <Link href="/" className="text-lg font-medium hover:text-gray-300 pl-8">
         Brian Liu
       </Link>
       <Link href="/Blog" className="text-lg font-medium hover:text-gray-300">

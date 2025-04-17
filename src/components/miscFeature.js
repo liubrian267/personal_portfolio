@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 const photos = [
+  "/highlights/snowboard.jpg",
   "/highlights/japan1.jpg",
   "/highlights/japan2.jpg",
   "/highlights/japan3.jpg",

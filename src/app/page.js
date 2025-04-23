@@ -17,8 +17,8 @@ const page = () => {
           data/math based.
         </div>
         <div className="mt-4 text-2xl font-normal">
-          In my free time, I’m very likely to be at the gym, playing brawl
-          stars, brainrotting, sleeping in, or stuffing my mouth
+          In my free time I’m very likely to be at the gym 💪, playing brawl
+          stars 🎮, brainrotting 🤳, sleeping in 😴, or stuffing my mouth 🍽️
         </div>
       </div>
       <div className="mt-10 text-5xl font-bold">

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const faces = [" (｡◕‿◕｡)", " ಠ_ಠ", " (⌐■_■)"];
+const faces = ["\(｡◕‿◕｡)/", " (ಠ_ಠ)", " (⌐■_■)"];
 
 export default function FaceCycle() {
   const [currentFaceIndex, setCurrentFaceIndex] = useState(0);
@@ -13,15 +13,17 @@ export default function FaceCycle() {
     setDisplayText("");
     
     const currentFace = faces[currentFaceIndex];
-    let index = 0;
+    let index = -1;
+    
     const typingInterval = setInterval(() => {
+      index++;
       if (index < currentFace.length) {
         setDisplayText(prev => prev + currentFace.charAt(index));
-        index++;
       } else {
         clearInterval(typingInterval);
       }
     }, 100);
+    
     return () => clearInterval(typingInterval);
   }, [currentFaceIndex]);
   

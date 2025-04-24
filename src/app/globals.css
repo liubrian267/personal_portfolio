@@ -15,7 +15,12 @@
     --foreground: #ededed;
   }
 } */
-
+html, body, * {
+  cursor: url("https://cdn.custom-cursor.com/db/22423/32/pusheen-sleeping-pointer.png") 16 16, pointer !important;
+}
+header {
+  cursor: url("https://cdn.custom-cursor.com/db/22423/32/pusheen-sleeping-pointer.png") 16 16, pointer;
+}
 body {
   cursor: url("https://cdn.custom-cursor.com/db/22423/32/pusheen-sleeping-pointer.png") 16 16, pointer;
   color: var(--foreground); 

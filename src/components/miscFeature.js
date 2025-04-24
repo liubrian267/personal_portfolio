@@ -25,7 +25,7 @@ export default function MiscFeature() {
             active === "highlights" ? "bg-gray-200" : "hover:bg-gray-100"
           }`}
         >
-          Highlights of My Life
+          Highlights
         </button>
         <button
           onClick={() => setActive("random")}

@@ -20,7 +20,7 @@ const page = () => {
           <ProjectCard imageUrl="/CourseSync.png" title="CourseSync" description="Generate a schedule based on desired courses" techStack={["React", "NextJS", "TypeScript", "MongoDB"
           ]}/>
           <ProjectCard title="WorthIt" description="Take a picture of a price tag in foreign currency and convert to realtime price, compare with market average to see if your getting a good deal" techStack={["React Native", "Javascript", "Python", "Fast API"
-          ]}/>
+          ]} links={["https://github.com/SamuelLo1/WorthIt-"]}/>
         </div>
       </div>
     </div>

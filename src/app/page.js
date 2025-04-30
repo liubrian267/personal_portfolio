@@ -46,19 +46,19 @@ const page = () => {
           <div className="p-6 rounded-xl bg-gray-200 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-gray-800">Software Engineering Intern</h3>
             <p className="text-xl text-gray-600 mt-1">San Jose State University</p>
-            <p className="text-xl text-gray-600 mt-3">Developed and maintained web applications using modern JavaScript frameworks and backend technologies.</p>
+            <p className="text-xl text-gray-600 mt-3">Set up schemas and database operations for professor/course review site, scrapping data from RateMyProfessor with GraphQL</p>
           </div>
           
           <div className="p-6 rounded-xl bg-gray-200 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-gray-800">Software Engineering Intern</h3>
             <p className="text-xl text-gray-600 mt-1">CodeDay Labs</p>
-            <p className="text-xl text-gray-600 mt-3">Collaborated with a team to build innovative solutions during this intensive program focused on real-world projects.</p>
+            <p className="text-xl text-gray-600 mt-3">Debugging Supabase data analytics log</p>
           </div>
           
           <div className="p-6 rounded-xl bg-gray-200 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-gray-800">Tech Lead</h3>
             <p className="text-xl text-gray-600 mt-1">Google Developer Student Club</p>
-            <p className="text-xl text-gray-600 mt-3">Led technical workshops and coordinated project development among student developers.</p>
+            <p className="text-xl text-gray-600 mt-3">Led technical workshops and helped organize and promote events such as DA Hacks and Google DevFest</p>
           </div>
         </div>
       </div>

@@ -17,6 +17,14 @@ export const Navbar = () => {
       </Link>
     </nav>
     <div className="flex items-center space-x-6">
+      <Link href="/Brian_Liu_Resume.pdf" className="hover:text-gray-300" aria-label="Resume">
+      <Image
+          src="/whiteresume.svg"
+          alt="Resume"
+          width={35}
+          height={35}
+        />
+      </Link>
       <Link
         href="https://github.com/liubrian267"
         className="hover:text-gray-300"

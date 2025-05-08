@@ -47,7 +47,8 @@ export default function FaceCycle() {
   return (
     <div className="font-mono h-10 flex items-center justify-center">
       {displayText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-blink">|</span>
+
     </div>
   );
 }

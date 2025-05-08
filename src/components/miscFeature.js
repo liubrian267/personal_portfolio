@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 
 const photos = [
-  "/highlights/snowboard.jpg",
-  "/highlights/japan1.jpg",
-  "/highlights/japan2.jpg",
-  "/highlights/japan3.jpg",
-  "/highlights/japan4.jpg",
-  "/highlights/japan5.jpg",
-  "/highlights/japan6.jpg",
-  "/highlights/japan7.jpg",
-  "/highlights/japan8.jpg",
+  { image: "/highlights/snowboard.jpg", description: "Snowboarding in Sierra at Tahoe" },
+  { image: "/highlights/japan1.jpg",      description: "First Meal in Japan" },
+  { image: "/highlights/japan2.jpg",      description: "Gyukatsu, Favorite Meal in Japan" },
+  { image: "/highlights/japan3.jpg",      description: "Okutama Nature" },
+  { image: "/highlights/japan4.jpg",      description: "More of Okutama" },
+  { image: "/highlights/japan5.jpg",      description: "Cool Car in Ginza" },
+  { image: "/highlights/japan6.jpg",      description: "Giant Budda Statue in Kamakura" },
+  { image: "/highlights/japan7.jpg",      description: "" },
+  { image: "/highlights/japan8.jpg",      description: "" }
 ];
 
 export default function MiscFeature() {
@@ -39,16 +39,23 @@ export default function MiscFeature() {
 
       {active === "highlights" && (
         <div className="w-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4 sm:px-20">
-          {photos.map((src, i) => (
+          {photos.map((photo, i) => (
             <div
               key={i}
               className="relative w-full aspect-square overflow-hidden rounded-lg shadow transition-transform duration-300 ease-in-out hover:scale-105"
             >
-              <img
-                src={src}
-                alt={`Highlight ${i + 1}`}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <div className="aspect-square relative">
+                  <img
+                    src={photo.image}
+                    alt="photo"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  
+
+                    <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-60 text-white p-3">
+                      <p className="text-sm font-medium">{photo.description}</p>
+                    </div>
+                </div>
             </div>
           ))}
         </div>

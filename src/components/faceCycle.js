@@ -1,40 +1,53 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const faces = ["\(｡◕‿◕｡)/", " (ಠ_ಠ)", " (⌐■_■)"];
+const faces = ["(｡◕‿◕｡)/", " (ಠ_ಠ)", " (⌐■_■)"];
 
 export default function FaceCycle() {
   const [currentFaceIndex, setCurrentFaceIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
-
-  //remoutes whenever index is updated since it is a dependency, prints the new face
+  // Handle the typing and deleting animations
   useEffect(() => {
-    setDisplayText("");
+    let animationInterval;
     
-    const currentFace = faces[currentFaceIndex];
-    let index = -1;
-    
-    const typingInterval = setInterval(() => {
-      index++;
-      if (index < currentFace.length) {
-        setDisplayText(prev => prev + currentFace.charAt(index));
+    if (isDeleting) {
+      // Deletion animation
+      if (displayText.length === 0) {
+        // Once fully deleted, move to the next face and start typing
+        setIsDeleting(false);
+        setCurrentFaceIndex(prevIndex => (prevIndex + 1) % faces.length);
       } else {
-        clearInterval(typingInterval);
+        // Continue deleting characters one by one
+        animationInterval = setInterval(() => {
+          setDisplayText(prev => prev.substring(0, prev.length - 1));
+        }, 100);
       }
-    }, 100);
+    } else {
+      // Typing animation
+      const currentFace = faces[currentFaceIndex];
+      
+      if (displayText.length < currentFace.length) {
+        // Continue typing characters one by one
+        animationInterval = setInterval(() => {
+          setDisplayText(prev => prev + currentFace.charAt(prev.length));
+        }, 100);
+      } else {
+        // Once fully typed, wait before starting deletion
+        animationInterval = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000);
+      }
+    }
     
-    return () => clearInterval(typingInterval);
-  }, [currentFaceIndex]);
-  
-  // change face every 3 seconds
-  useEffect(() => {
-    const faceChangeInterval = setInterval(() => {
-      setCurrentFaceIndex(prevIndex => (prevIndex + 1) % faces.length);
-    }, 3000);
-    
-    return () => clearInterval(faceChangeInterval);
-  }, []);
+    return () => clearInterval(animationInterval);
+  }, [displayText, isDeleting, currentFaceIndex]);
 
-  return <div>{displayText}</div>;
+  return (
+    <div className="font-mono h-10 flex items-center justify-center">
+      {displayText}
+      <span className="animate-pulse">|</span>
+    </div>
+  );
 }
